@@ -1,0 +1,17 @@
+
+$charcoal: #373737;
+
+$offwhite: #fafafa;
+$black: #333;
+
+$speech-bg: rgba(255,255,255,0.2);
+$speech-bg-dark: rgba(0,0,0,0.1);
+
+$gradient-transition-duration: 1.5s;
+
+@mixin absolute-center{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}

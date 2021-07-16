@@ -1,0 +1,117 @@
+@import './variables.scss';
+
+.app-section{
+    position: relative;
+    min-height: 100vh;
+    .container{
+        padding: 3rem 0rem;
+        height:100%;
+    }
+    .app-section-title{
+        font-family: 'Raleway', sans-serif;
+        font-size: 4em;
+    }
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .4s;
+}
+.fade-enter, .fade-leave-to{
+  opacity: 0
+}
+
+.clearfix {
+    &::after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+}
+
+.raleway{
+    font-family: 'Raleway', sans-serif;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.robot-text{
+    text-transform: uppercase;
+}
+
+@mixin speech-bubble{
+    border-radius: 5px;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    transition: $gradient-transition-duration;
+}
+
+.speech-bubble-light{
+    @include speech-bubble;
+    box-shadow: 0.2em 0 0 $speech-bg, -0.2em 0 0 $speech-bg;
+    background-color: $speech-bg;
+    color: #fafafa;
+}
+
+.speech-bubble-dark{
+    @include speech-bubble;
+    box-shadow: 0.2em 0 0 $speech-bg-dark, -0.2em 0 0 $speech-bg-dark;
+    background-color: $speech-bg-dark;
+    color: #333;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-animation: autofill 0s forwards;
+    animation: autofill 0s forwards;
+}
+
+@keyframes autofill {
+    100% {
+        background: transparent;
+        color: inherit;
+    }
+}
+
+@-webkit-keyframes autofill {
+    100% {
+        background: transparent;
+        color: inherit;
+    }
+}
+
+.under-construction{
+    color: dimgrey;
+}
+
+.scrollfire-active{
+    transition: 0.6s;
+}
+
+.scrollfire-appear{
+    opacity: 0;
+}
+
+.scrollfire-to-top{
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+}
+
+.scrollfire-to-left{
+    opacity: 0;
+    transform: translateX(30px);
+}
+.scrollfire-to-right{
+    opacity: 0;
+    transform: translateX(-30px);
+}
+
+.scrollfire-exit-to-left{
+    transform: translateX(-30px);
+}
